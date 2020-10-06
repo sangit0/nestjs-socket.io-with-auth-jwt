@@ -35,10 +35,14 @@ export class UserService {
     toUser.save();
     return 'Friend Request Sent!';
   }
-  async approveRequest(reqId: string, ofUser: string): Promise<String> {
+  async approveRequest(
+    reqId: string,
+    user: string,
+    ofUser: string,
+  ): Promise<String> {
     await this.userModel.findOneAndUpdate(
       {
-        _id: ofUser,
+        _id: user,
         'friends._id': reqId,
       },
       {
@@ -51,8 +55,8 @@ export class UserService {
 
     await this.userModel.findOneAndUpdate(
       {
-        _id: reqId,
-        'friends._id': ofUser,
+        _id: ofUser,
+        'friends.id': user,
       },
       {
         $set: {

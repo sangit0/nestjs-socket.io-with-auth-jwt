@@ -45,11 +45,15 @@ export class ChatsController {
     return this.userService.sentRequest(user._id, username);
   }
 
-  @Get('approve-request/:id')
+  @Get('approve-request/:id/:ofUser')
   @UseGuards(JwtAuthGuard)
-  approveRequest(@Param('id') id: string, @Request() req) {
+  approveRequest(
+    @Param('id') id: string,
+    @Param('ofUser') ofUser: string,
+    @Request() req,
+  ) {
     let user = req.user;
-    return this.userService.approveRequest(id, user._id);
+    return this.userService.approveRequest(id, user._id, ofUser);
   }
 
   @Get(':id')

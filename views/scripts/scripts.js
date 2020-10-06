@@ -72,6 +72,7 @@ function getFriends() {
       },
       error: function(xhr, status, errorThrown) {
         alert(xhr.responseText);
+        removeToken();
       },
     });
   }
@@ -91,6 +92,7 @@ function saveChat(data) {
       success: function(json) {},
       error: function(xhr, status, errorThrown) {
         alert(xhr.responseText);
+        removeToken();
       },
     });
   }
@@ -130,16 +132,17 @@ function loadChat(id, name) {
       },
       error: function(xhr, status, errorThrown) {
         alert(xhr.responseText);
+        removeToken();
       },
     });
   }
 }
-function accpectReq(id) {
+function accpectReq(id, ofUser) {
   if (getToken()) {
     let user = getUser();
     $.ajax({
       type: 'GET',
-      url: `/chats/approve-request/${id}`,
+      url: `/chats/approve-request/${id}/${ofUser}`,
       dataType: 'json',
       beforeSend: function(xhr) {
         xhr.setRequestHeader('Authorization', 'Bearer ' + user.accessToken);
@@ -149,6 +152,7 @@ function accpectReq(id) {
       },
       error: function(xhr, status, errorThrown) {
         alert(xhr.responseText);
+        // removeToken();
       },
     });
   }
@@ -220,6 +224,7 @@ function insertMyChat(message) {
 function clearAll() {
   $('#chatFriends').html('No Friends to show');
   $('#chatPanel').html('');
+  $('#userSelected').html('');
   $('#chatBox').html(`<div class="col s9">
   <code>No user selected</code>
 </div>`);
@@ -247,7 +252,7 @@ function generateFriendsHtml(friends) {
             <button
             class="btn waves-effect waves-light btn-small indigo btn-block"
             type="button"
-            onclick="accpectReq('${item._id}')"
+            onclick="accpectReq('${item._id}','${item.id._id}')"
           >
           Receive
           </button>
