@@ -1,6 +1,6 @@
 # Description
 
-This is a demo of chat application.
+A simple chat application where you can chat with friends and sent friend request using nest.js, mongo, socket.io and passport js
 
 ## TechStack
 
@@ -11,10 +11,10 @@ This is a demo of chat application.
 
 ## Screenshot
 
-![alt text](https://github.com/nestjs-socket.io-with-auth-jwt/tree/main/screenshot/1.png 'Screenshot')
-![alt text](https://github.com/nestjs-socket.io-with-auth-jwt/tree/main/screenshot/1.png 'Screenshot')
-![alt text](https://github.com/nestjs-socket.io-with-auth-jwt/tree/main/screenshot/3.png 'Screenshot')
-![alt text](https://github.com/nestjs-socket.io-with-auth-jwt/tree/main/screenshot/4.png 'Screenshot')
+![alt text](https://github.com/nestjs-socket.io-with-auth-jwt/blob/main/screenshot/1.png 'Screenshot')
+![alt text](https://github.com/nestjs-socket.io-with-auth-jwt/blob/main/screenshot/1.png 'Screenshot')
+![alt text](https://github.com/nestjs-socket.io-with-auth-jwt/blob/main/screenshot/3.png 'Screenshot')
+![alt text](https://github.com/nestjs-socket.io-with-auth-jwt/blob/main/screenshot/4.png 'Screenshot')
 
 ## Installation
 
