@@ -11,10 +11,10 @@ A simple chat application where you can chat with friends and sent friend reques
 
 ## Screenshot
 
-![alt text](https://github.com/sangit0/nestjs-socket.io-with-auth-jwt/blob/main/screenshot/1.png'Screenshot')
-![alt text](https://github.com/sangit0/nestjs-socket.io-with-auth-jwt/blob/main/screenshot/2.png'Screenshot')
-![alt text](https://github.com/sangit0/nestjs-socket.io-with-auth-jwt/blob/main/screenshot/3.png'Screenshot')
-![alt text](https://github.com/sangit0/nestjs-socket.io-with-auth-jwt/blob/main/screenshot/4.png'Screenshot')
+![alt text](https://github.com/sangit0/nestjs-socket.io-with-auth-jwt/blob/main/screenshot/1.png 'Screenshot')
+![alt text](https://github.com/sangit0/nestjs-socket.io-with-auth-jwt/blob/main/screenshot/2.png 'Screenshot')
+![alt text](https://github.com/sangit0/nestjs-socket.io-with-auth-jwt/blob/main/screenshot/3.png 'Screenshot')
+![alt text](https://github.com/sangit0/nestjs-socket.io-with-auth-jwt/blob/main/screenshot/4.png 'Screenshot')
 
 ## Installation
 
